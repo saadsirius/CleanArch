@@ -11,6 +11,6 @@ namespace CleanArch.Infr.Data.Context
         public CleanArchDBContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Courses> Courses { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 }
