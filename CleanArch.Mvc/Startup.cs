@@ -13,6 +13,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CleanArch.Presentation.Data;
 using CleanArch.Data.Context;
+using Data.Repository;
+using Application.Services;
+using Domain.Interfaces;
+using Application.Interfaces;
 
 namespace CleanArch.Presentation
 {
@@ -39,6 +43,8 @@ namespace CleanArch.Presentation
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<IFileTransferService, FileTransferService>();
+            services.AddScoped<IFileTransferRepository, FileTransferRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
