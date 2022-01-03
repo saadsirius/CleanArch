@@ -3,20 +3,33 @@ using Domain.Interfaces;
 using Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Data.Repository
 {
-   public class FileTransferRepository : IFileTransferRepository
+    public class FileTransferRepository : IFileTransferRepository
     {
-        private CleanArchDBContext _context;
-        public FileTransferRepository(CleanArchDBContext context)
+            private CleanArchDBContext context;
+            public FileTransferRepository(CleanArchDBContext context)
+            {
+                this.context = context;
+            }
+
+            public FileTransfer GetFileTransfer(int id)
         {
-            _context = context;
+            return context.FileTransfers.SingleOrDefault(f => f.Id == id);
         }
-        public IEnumerable<FileTransfer> GetFileTransfers()
+
+        public IQueryable<FileTransfer> GetFileTransfers()
         {
-            throw new NotImplementedException();
+            return context.FileTransfers;
+        }
+
+        public void AddFile(FileTransfer ft)
+        {
+            context.FileTransfers.Add(ft);
+            context.SaveChanges();
         }
     }
 }
