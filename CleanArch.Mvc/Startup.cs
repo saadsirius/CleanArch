@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using CleanArch.Mvc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using CleanArch.Infr.Data.Context;
+using CleanArch.Presentation.Data;
+using CleanArch.Data.Context;
 
-namespace CleanArch.Mvc
+namespace CleanArch.Presentation
 {
     public class Startup
     {

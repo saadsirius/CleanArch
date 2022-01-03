@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using CleanArch.Presentation.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CleanArch.Mvc.Models;
 
-namespace CleanArch.Mvc.Controllers
+namespace CleanArch.Presentation.Controllers
 {
     public class HomeController : Controller
     {

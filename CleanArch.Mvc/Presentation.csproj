@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-CleanArch.Mvc-DE4382A5-733F-497D-8D11-0B0B25FAC280</UserSecretsId>
+    <StartupObject>CleanArch.Presentation.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,10 +18,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArch\CleanArch.Infr.Data\CleanArch.Infr.Data.csproj" />
+    <ProjectReference Include="..\CleanArch\Data\Data.csproj" />
   </ItemGroup>
 
 </Project>

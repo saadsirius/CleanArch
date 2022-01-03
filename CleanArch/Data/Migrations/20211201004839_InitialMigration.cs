@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CleanArch.Infr.Data.Migrations
+namespace CleanArch.Data.Migrations
 {
     public partial class InitialMigration : Migration
     {
